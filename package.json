@@ -1,0 +1,23 @@
+{
+	"name": "roda-a-roda",
+	"version": "2.0.0",
+	"description": "Jogo baseado no programa Roda a Roda Jequiti do Silvio Santos",
+	"main": "app.js",
+	"scripts": {
+		"start": "node app.js"
+	},
+	"engines": {
+		"node": ">=0.10.0"
+	},
+	"files": [
+		"app.js"
+	],
+	"author": "Fernando Bráulio",
+	"license": "MIT",
+	"homepage": "http://fernandobraulio.tk/",
+	"dependencies": {
+		"serve-static": "",
+		"connect": "",
+		"network": ""
+	}
+}

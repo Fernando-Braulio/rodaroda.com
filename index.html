@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+  	<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=1" />
+		<meta name="description" content="Jogo Roda a Roda do Silvio Santos">
+  	<meta name="author" content="Fernando Bráulio">
+		<meta name="keywords" content="silvio santos, roda a roda, roda a roda silvio santos, roda a roda jequiti">
+		<meta name="mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+		<meta name="apple-mobile-web-app-title" content="Roda a Roda">
+		<meta name="robots" content="index, follow">
+
+		<meta name="msapplication-TileColor" content="#369bd7">
+		<meta name="theme-color" content="#369bd7">
+
+		<title>Roda a Roda</title>
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/style.min.css">
+	</head>
+	<body>
+		<!-- Fixed navbar -->
+		<nav class="navbar navbar-custom navbar-fixed-top">
+			<div class="container">
+				<div class="navbar-header">
+					<!-- <span>Roda a Roda</span> -->
+					<a class="navbar-brand" href="#"><img src="img/icon.png"></a>
+				</div>
+			</div>
+		</nav>
+
+		<div class="container">
+			<p id="loading">Carregando...</p>
+			<div id="content" class="hide" >
+				<div class="row row-1">
+					<div class="col-md-9">
+						<p>Palavra:</p>
+						<div class="row answer">
+							<div class="col-xs-1 accepted-letter" id="letter_0"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_1"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_2"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_3"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_4"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_5"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_6"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_7"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_8"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_9"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_10"></div>
+							<div class="col-xs-1 accepted-letter" id="letter_11"></div>
+						</div>
+					</div>
+					<div class="col-md-3">
+						<p>Escolha uma letra:</p>
+						<table>
+							<tbody>
+								<tr>
+									<td><button type="button" class="btn btn-default letters" id="letter_A">A</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_B">B</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_C">C</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_D">D</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_E">E</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_F">F</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_G">G</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-default letters" id="letter_H">H</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_I">I</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_J">J</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_K">K</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_L">L</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_M">M</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_N">N</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-default letters" id="letter_O">O</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_P">P</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_Q">Q</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_R">R</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_S">S</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_T">T</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_U">U</button></td>
+								</tr>
+								<tr>
+									<td><button type="button" class="btn btn-default letters" id="letter_V">V</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_X">X</button></td>
+									<td><button type="button" class="btn btn-default letters" id="letter_Z">Z</button></td>
+									<td></td>
+									<td></td>
+									<td></td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-9">
+						<p>&nbsp;</p>
+						<div class="input-group">
+							<span class="input-group-addon" id="basic-addon1">Dica</span>
+							<input type="text" id="hint" class="form-control" autocomplete="off"  aria-describedby="basic-addon1" disabled="disabled">
+						</div>
+					</div>
+					<div class="col-md-3">
+						<p>Opções: </p>
+						<button type="button" class="btn btn-primary" id="risk-the-answer" data-toggle="modal" data-target="#modal-risk-the-answer" >Responder</button>
+						<button type="button" class="btn btn-success" id="btn-next-word">Próxima Palavra</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal-risk-the-answer" tabindex="-1" role="dialog" aria-labelledby="modal-change-location-label">
+			<form id="form-risk-the-answer" autocomplete="off">
+				<div class="modal-dialog" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h4 class="modal-title" id="modal-change-location-label">Chutar</h4>
+						</div>
+						<div class="modal-body">
+							<div class="form-group">
+								<label for="the-anwser">A palavra é:</label>
+								<input type="text" class="form-control" id="the-anwser" autofocus>
+							</div>
+						</div>
+						<div class="modal-footer">
+		  					<button type="submit" class="btn btn-primary" id="btn-risk-the-answer">Responder</button>
+							<button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+						</div>
+					</div>
+				</div>
+			</form>
+		</div>
+
+		<div class="modal" id="modal-congratulations" tabindex="-1" role="dialog" aria-labelledby="modal-change-location-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="modal-change-location-label">Parabéns!</h4>
+					</div>
+					<div class="modal-body">
+						<p>Você acertou! Que tal tentar outra palavra?</p>
+					</div>
+					<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+							<!-- <button type="button" class="btn btn-success" id="btn-next-word">Próxima Palavra</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="modal" id="modal-fail" tabindex="-1" role="dialog" aria-labelledby="modal-change-location-label">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h4 class="modal-title" id="modal-change-location-label">Se f****!</h4>
+					</div>
+					<div class="modal-body">
+						<p>Você errou! Que tal tentar outra palavra?</p>
+					</div>
+					<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+							<!-- <button type="button" class="btn btn-success" id="btn-next-word">Próxima Palavra</button> -->
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class="footer-copyright text-center py-3">© 2019 Copyright:
+			<a href="http://fernandobraulio.tk/" target="_blank"> Fernando Bráulio</a>
+		</div>
+
+		<script type="text/javascript" src="js/jquery.min.js"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="js/howler.min.js"></script>
+		<script type="text/javascript" src="js/script.min.js"></script>
+		<script>
+			//Google Analitcs aqui
+		</script>
+	</body>
+</html>
