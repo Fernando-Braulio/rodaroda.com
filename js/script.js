@@ -6,7 +6,7 @@ var selected_word,
     wrong_sound,
     is_finished = false;
     is_correct = false,
-    url = "https://github.com/Fernando-Braulio/rodaroda.com/blob/master/database.json"
+    url = "https://raw.githubusercontent.com/Fernando-Braulio/rodaroda.com/master/database.json"
     words = [];
 
 function showTheAnswer(){
