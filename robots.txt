@@ -1,0 +1,8 @@
+User-agent: *
+Allow:/*
+Disallow:READMI.md
+Disallow:package.json
+Disallow:package-lock.json
+Disallow:database.json
+Disallow:app.js
+Disallow:.gitattributes
