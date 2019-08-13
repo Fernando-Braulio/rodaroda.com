@@ -5,8 +5,13 @@
 	http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
 	<url>
-		<loc>https://jogorodaroda.ml/</loc>
+		<loc>://jogorodaroda.ml/</loc>
 		<changefreq>daily</changefreq>
 		<priority>1</priority>
+	</url>
+	<url>
+		<loc>://://jogorodaroda.ml/</loc>
+		<changefreq>weekly</changefreq>
+		<priority>0.99</priority>
 	</url>
 </urlset>
